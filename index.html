@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DarkStar Games | Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-brand">
+            <h1>DarkStar Games</h1>
+        </div>
+
+        <button id="mobile-menu-btn" class="hamburger">&#9776;</button>
+
+        <div id="sidebar-overlay" class="overlay"></div>
+
+        <div id="sidebar-menu" class="sidebar">
+            <button id="close-sidebar-btn" class="close-sidebar">&times;</button>
+            
+            <div class="nav-account" id="nav-account">
+                <div id="auth-logged-out">
+                    <button id="open-auth-btn" class="btn-outline">Login / Signup</button>
+                </div>
+                <div id="auth-logged-in" class="hidden auth-card">
+                    <span id="user-greeting">Welcome, Player</span>
+                    <button id="logout-btn" class="btn-outline">Logout</button>
+                </div>
+            </div>
+
+            <nav class="nav-tabs" id="nav-tabs">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About Studio</a>
+                <a href="#leadership">Leadership</a>
+                <a href="games.html">Our Games</a>
+                <a href="credits.html">Studio</a>
+                <a href="project-request.html">Make Your OWN</a>
+                <a href="apply.html">Apply for Job</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="#contact">Contact</a>
+                <a href="terms.html">Terms & Conditions</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero fade-in">
+            <h2>Forging Next-Gen Experiences</h2>
+            <p>We build immersive worlds, competitive multiplayer environments, and interactive entertainment that pushes the boundaries of modern gameplay.</p>
+            <button class="btn-primary">Explore Our Universe</button>
+        </section>
+
+        <section id="about" class="studio-info fade-in-delayed">
+            <h3>About DarkStar Games</h3>
+            <p>DarkStar Games is an independent game development studio dedicated to crafting high-quality digital experiences. By bridging the gap between innovative web development and engaging game mechanics, our studio focuses on robust backend architecture, seamless player movement, and cutting-edge interactive technology. We are driven by clean code, engaging storytelling, and competitive multiplayer design.</p>
+        </section>
+
+        <section id="leadership" class="leadership-section fade-in-delayed">
+            <h3>Studio Leadership</h3>
+            <p class="section-subtitle">Meet the directors leading the vision and technical execution at DarkStar Games.</p>
+            
+            <div class="card-container">
+                <div class="director-card">
+                    <div class="card-header">
+                        <h4>Abhijeet Ray</h4>
+                        <span class="role-badge">Founder & Lead Developer</span>
+                    </div>
+                    <div class="card-body">
+                        <p>Leading the studio's technical direction, Abhijeet specializes in web development, backend architecture, and core game mechanics. He oversees the integration of interactive web technologies and game engines to bring DarkStar's projects to life.</p>
+                    </div>
+                </div>
+
+                <div class="director-card">
+                    <div class="card-header">
+                        <h4>Utsav Pitroda</h4>
+                        <span class="role-badge">Co-Founder & Director</span>
+                    </div>
+                    <div class="card-body">
+                        <p>Driving the studio's operational and creative vision, Utsav co-directs project development. He focuses on scaling the studio's capabilities, ensuring high-quality design standards, and expanding DarkStar Games' footprint in the industry.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 DarkStar Games. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="auth-modal" class="modal hidden">
+        <div class="modal-panel animate-pop">
+            <button class="close-modal">&times;</button>
+            
+            <div class="auth-tabs">
+                <button id="tab-login" class="auth-tab active">Login</button>
+                <button id="tab-signup" class="auth-tab">Signup</button>
+            </div>
+
+            <form id="login-form" class="auth-form">
+                <div class="input-group">
+                    <label for="login-id">Username or Email</label>
+                    <input type="text" id="login-id" placeholder="Enter username or email" required>
+                </div>
+                <div class="input-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" minlength="8" placeholder="••••••••" required>
+                </div>
+                <p id="login-error" class="error-text hidden"></p>
+                <button type="submit" class="btn-primary full-width">Sign In</button>
+            </form>
+
+            <form id="signup-form" class="auth-form hidden">
+                <div class="input-group">
+                    <label for="signup-username">Username</label>
+                    <input type="text" id="signup-username" placeholder="Choose a username" required>
+                </div>
+                <div class="input-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="signup-password">Password (Min 8 chars)</label>
+                    <input type="password" id="signup-password" minlength="8" placeholder="••••••••" required>
+                </div>
+                <p id="signup-error" class="error-text hidden"></p>
+                <button type="submit" class="btn-primary full-width">Create Account</button>
+            </form>
+
+            <div class="separator"><span>OR</span></div>
+            
+            <button id="google-btn" class="btn-google full-width">
+                <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google Logo" width="18">
+                Continue with Google
+            </button>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
